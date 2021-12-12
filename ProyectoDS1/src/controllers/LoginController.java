@@ -1,9 +1,11 @@
 package controllers;
 import ventanas.*;
+import bbdd.*;
 
 public class LoginController 
 {
 	public static Login ventana = new Login();
+	public static BDLogin bd = new BDLogin();
 	
 	public static void mostrar()
 	{
@@ -20,25 +22,46 @@ public class LoginController
 	{
 		String usuario = ventana.getTextUser().getText();
 		String password = ventana.getTextPass().getText();
+		String nombre = bd.loginUserAdmin();
+		String contrasena = bd.loginPassAdmin();
 		
-		if(usuario.equals("admin") && password.equals("1234"))
+		if(bd.verificarAdmin() == "admin")
 		{
-			ocultar();
-			PrincipalController.mostrar();
+			if(usuario.equals(nombre) && password.equals(contrasena))
+			{
+				ocultar();
+				PrincipalController.mostrar();
+			}
+			else
+			{
+				System.out.println("Contraseña o nombre de usuario incorrectos");
+			}
 		}
-		else if(usuario.equals("docente") && password.equals("0000"))
+		/*else if(bd.verificarDocente() == "docente")
 		{
-			ocultar();
-			PDocenteController.mostrar();
+			if(usuario.equals(nombre) && password.equals(contrasena))
+			{
+				ocultar();
+				PDocenteController.mostrar();
+			}
+			else
+			{
+				System.out.println("Contraseña o nombre de usuario incorrectos");
+			}
 		}
-		else if(usuario.equals("padre") && password.equals("7890"))
+		else if(bd.verificarPadre() == "acudiente")
 		{
-			ocultar();
-			PPadreController.mostrar();
-		}
-		else
-		{
-			System.out.println("Contraseña o nombre de usuario incorrectos");
-		}
+			if(usuario.equals(nombre) && password.equals(contrasena))
+			{
+				ocultar();
+				PPadreController.mostrar();
+			}
+			else
+			{
+				System.out.println("Contraseña o nombre de usuario incorrectos");
+			}
+		}*/
+		
+		
 	}
 }
