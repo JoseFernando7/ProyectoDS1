@@ -24,7 +24,7 @@ import javax.swing.JSpinner;
 import javax.swing.JList;
 import javax.swing.AbstractListModel;
 
-public class VentanaPrincipal extends JFrame
+public class VentanaEstudiante extends JFrame
 {
 	/**
 	 * 
@@ -53,7 +53,7 @@ public class VentanaPrincipal extends JFrame
 		});
 	}
 
-	public VentanaPrincipal() 
+	public VentanaEstudiante() 
 	{
 		initialize();
 	}
