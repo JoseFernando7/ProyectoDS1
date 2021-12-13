@@ -186,11 +186,27 @@ public class VentanaDocentes extends JFrame
 		JButton btnRegistrarDocente = new JButton("REGISTRAR");
 		btnRegistrarDocente.setForeground(Color.WHITE);
 		btnRegistrarDocente.setFont(new Font("Century Gothic", Font.BOLD, 22));
-		btnRegistrarDocente.setBounds(117, 552, 190, 40);
+		btnRegistrarDocente.setBounds(110, 530, 190, 40);
 		btnRegistrarDocente.setBackground(new Color(87, 87, 87));
 		btnRegistrarDocente.setFocusPainted(false);
 		//btnRegistrarDocente.setBorderPainted(false);
 		panel_1.add(btnRegistrarDocente);
+		
+		JButton btnModificar = new JButton("MODIFICAR");
+		btnModificar.setForeground(Color.WHITE);
+		btnModificar.setFont(new Font("Century Gothic", Font.BOLD, 22));
+		btnModificar.setFocusPainted(false);
+		btnModificar.setBackground(new Color(87, 87, 87));
+		btnModificar.setBounds(110, 600, 190, 40);
+		panel_1.add(btnModificar);
+		
+		JButton btnInhabilitar = new JButton("INHABILITAR");
+		btnInhabilitar.setForeground(Color.WHITE);
+		btnInhabilitar.setFont(new Font("Century Gothic", Font.BOLD, 22));
+		btnInhabilitar.setFocusPainted(false);
+		btnInhabilitar.setBackground(new Color(87, 87, 87));
+		btnInhabilitar.setBounds(110, 670, 190, 40);
+		panel_1.add(btnInhabilitar);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBounds(478, 0, 706, 761);
@@ -217,59 +233,59 @@ public class VentanaDocentes extends JFrame
 		lblNewLabel_2_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_2_1.setForeground(Color.WHITE);
 		lblNewLabel_2_1.setFont(new Font("Century Gothic", Font.PLAIN, 20));
-		lblNewLabel_2_1.setBounds(187, 265, 363, 40);
+		lblNewLabel_2_1.setBounds(187, 245, 363, 40);
 		panel_2.add(lblNewLabel_2_1);
 		
 		JLabel lblNewLabel_3 = new JLabel("ID:");
 		lblNewLabel_3.setForeground(Color.WHITE);
 		lblNewLabel_3.setFont(new Font("Century Gothic", Font.PLAIN, 20));
 		lblNewLabel_3.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNewLabel_3.setBounds(57, 329, 52, 26);
+		lblNewLabel_3.setBounds(57, 309, 52, 26);
 		panel_2.add(lblNewLabel_3);
 		
 		JLabel infoIdDocente = new JLabel("New label");
 		infoIdDocente.setForeground(Color.WHITE);
 		infoIdDocente.setFont(new Font("Century Gothic", Font.PLAIN, 20));
-		infoIdDocente.setBounds(139, 329, 210, 26);
+		infoIdDocente.setBounds(139, 309, 210, 26);
 		panel_2.add(infoIdDocente);
 		
 		JLabel lblNewLabel_3_1 = new JLabel("Tel\u00E9fono:");
 		lblNewLabel_3_1.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_3_1.setForeground(Color.WHITE);
 		lblNewLabel_3_1.setFont(new Font("Century Gothic", Font.PLAIN, 18));
-		lblNewLabel_3_1.setBounds(364, 329, 94, 26);
+		lblNewLabel_3_1.setBounds(364, 309, 94, 26);
 		panel_2.add(lblNewLabel_3_1);
 		
 		JLabel infoTelDocente = new JLabel("New label");
 		infoTelDocente.setForeground(Color.WHITE);
 		infoTelDocente.setFont(new Font("Century Gothic", Font.PLAIN, 20));
-		infoTelDocente.setBounds(468, 329, 194, 26);
+		infoTelDocente.setBounds(468, 309, 194, 26);
 		panel_2.add(infoTelDocente);
 		
 		JLabel lblNewLabel_3_2 = new JLabel("Correo:");
 		lblNewLabel_3_2.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_3_2.setForeground(Color.WHITE);
 		lblNewLabel_3_2.setFont(new Font("Century Gothic", Font.PLAIN, 18));
-		lblNewLabel_3_2.setBounds(57, 398, 72, 26);
+		lblNewLabel_3_2.setBounds(57, 378, 72, 26);
 		panel_2.add(lblNewLabel_3_2);
 		
 		JLabel infoCorreoDocente = new JLabel("New label");
 		infoCorreoDocente.setForeground(Color.WHITE);
 		infoCorreoDocente.setFont(new Font("Century Gothic", Font.PLAIN, 20));
-		infoCorreoDocente.setBounds(139, 398, 210, 26);
+		infoCorreoDocente.setBounds(139, 378, 210, 26);
 		panel_2.add(infoCorreoDocente);
 		
 		JLabel lblNewLabel_3_1_1 = new JLabel("Estudio:");
 		lblNewLabel_3_1_1.setHorizontalAlignment(SwingConstants.LEFT);
 		lblNewLabel_3_1_1.setForeground(Color.WHITE);
 		lblNewLabel_3_1_1.setFont(new Font("Century Gothic", Font.PLAIN, 18));
-		lblNewLabel_3_1_1.setBounds(364, 398, 80, 26);
+		lblNewLabel_3_1_1.setBounds(364, 378, 80, 26);
 		panel_2.add(lblNewLabel_3_1_1);
 		
 		JLabel infoEstDocente = new JLabel("New label");
 		infoEstDocente.setForeground(Color.WHITE);
 		infoEstDocente.setFont(new Font("Century Gothic", Font.PLAIN, 20));
-		infoEstDocente.setBounds(468, 398, 194, 26);
+		infoEstDocente.setBounds(468, 378, 194, 26);
 		panel_2.add(infoEstDocente);
 		
 		JLabel lblNewLabel_2_1_1 = new JLabel("Asignar Docente");
@@ -303,6 +319,19 @@ public class VentanaDocentes extends JFrame
 		btnAsignarDocente.setBounds(268, 620, 190, 40);
 		panel_2.add(btnAsignarDocente);
 		
+		JLabel lblNewLabel_3_2_2 = new JLabel("Grado:");
+		lblNewLabel_3_2_2.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel_3_2_2.setForeground(Color.WHITE);
+		lblNewLabel_3_2_2.setFont(new Font("Century Gothic", Font.PLAIN, 18));
+		lblNewLabel_3_2_2.setBounds(57, 435, 72, 26);
+		panel_2.add(lblNewLabel_3_2_2);
+		
+		JLabel infoGradoDocente = new JLabel("New label");
+		infoGradoDocente.setForeground(Color.WHITE);
+		infoGradoDocente.setFont(new Font("Century Gothic", Font.PLAIN, 20));
+		infoGradoDocente.setBounds(139, 435, 210, 26);
+		panel_2.add(infoGradoDocente);
+		
 		JButton btnMatricula = new JButton("");
 		btnMatricula.addActionListener(new ActionListener() 
 		{
@@ -327,6 +356,13 @@ public class VentanaDocentes extends JFrame
 		panel.add(btnProfesor);
 		
 		JButton btnEstudiantes = new JButton("");
+		btnEstudiantes.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				DocenteController.botonEstudiante();
+			}
+		});
 		btnEstudiantes.setBounds(10, 232, 60, 60);
 		btnEstudiantes.setIcon(new ImageIcon(new ImageIcon("Imgs/estudiantes.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT)));
 		btnEstudiantes.setFocusPainted(false);
@@ -335,6 +371,13 @@ public class VentanaDocentes extends JFrame
 		panel.add(btnEstudiantes);
 		
 		JButton btnReportes = new JButton("");
+		btnReportes.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				DocenteController.botonReporte();
+			}
+		});
 		btnReportes.setBounds(10, 303, 60, 60);
 		btnReportes.setIcon(new ImageIcon(new ImageIcon("Imgs/registrar_notas.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT)));
 		btnReportes.setFocusPainted(false);
@@ -343,6 +386,13 @@ public class VentanaDocentes extends JFrame
 		panel.add(btnReportes);
 		
 		JButton btnRegistrar = new JButton("");
+		btnRegistrar.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				DocenteController.botonAnotaciones();
+			}
+		});
 		btnRegistrar.setBounds(10, 374, 60, 60);
 		btnRegistrar.setIcon(new ImageIcon(new ImageIcon("Imgs/registrar_notas.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT)));
 		btnRegistrar.setFocusPainted(false);

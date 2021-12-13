@@ -220,6 +220,12 @@ public class PrincipalDocente extends JFrame
 		gradoDocente.setBounds(300, 455, 320, 30);
 		panel_2.add(gradoDocente);
 		
+		JButton btnCambiarContrasena = new JButton("Cambiar Contrase\u00F1a");
+		btnCambiarContrasena.setFont(new Font("Century Gothic", Font.PLAIN, 15));
+		btnCambiarContrasena.setBounds(60, 693, 200, 30);
+		btnCambiarContrasena.setFocusPainted(false);
+		panel_2.add(btnCambiarContrasena);
+		
 		JButton btnMensualidad = new JButton("");
 		btnMensualidad.addActionListener(new ActionListener() 
 		{

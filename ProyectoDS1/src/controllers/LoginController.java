@@ -25,9 +25,9 @@ public class LoginController
 		String nombre = bd.loginUserAdmin();
 		String contrasena = bd.loginPassAdmin();
 		
-		if(bd.verificarAdmin() == "admin")
+		if(usuario.equals(nombre) && password.equals(contrasena))
 		{
-			if(usuario.equals(nombre) && password.equals(contrasena))
+			if(bd.verificarAdmin().equals("admin"))
 			{
 				ocultar();
 				PrincipalController.mostrar();
@@ -37,7 +37,7 @@ public class LoginController
 				System.out.println("Contraseña o nombre de usuario incorrectos");
 			}
 		}
-		/*else if(bd.verificarDocente() == "docente")
+		/*if(bd.verificarDocente() == "docente")
 		{
 			if(usuario.equals(nombre) && password.equals(contrasena))
 			{
@@ -49,7 +49,7 @@ public class LoginController
 				System.out.println("Contraseña o nombre de usuario incorrectos");
 			}
 		}
-		else if(bd.verificarPadre() == "acudiente")
+		if(bd.verificarPadre() == "acudiente")
 		{
 			if(usuario.equals(nombre) && password.equals(contrasena))
 			{

@@ -122,7 +122,7 @@ public class VentanaInforme extends JFrame
 		
 		descNota = new JTextField();
 		descNota.setColumns(10);
-		descNota.setBounds(580, 450, 470, 30);
+		descNota.setBounds(580, 398, 470, 82);
 		descNota.setForeground(Color.WHITE);
 		descNota.setFont(new Font("Century Gothic", Font.PLAIN, 20));
 		descNota.setBackground(new Color(87, 87, 87));
@@ -131,19 +131,10 @@ public class VentanaInforme extends JFrame
 		JLabel lblNewLabel_2_1_1 = new JLabel("Descripci\u00F3n Actividad:");
 		lblNewLabel_2_1_1.setForeground(Color.WHITE);
 		lblNewLabel_2_1_1.setFont(new Font("Century Gothic", Font.PLAIN, 20));
-		lblNewLabel_2_1_1.setBounds(330, 450, 226, 30);
+		lblNewLabel_2_1_1.setBounds(331, 424, 226, 30);
 		panel_2.add(lblNewLabel_2_1_1);
 		
-		JLabel lblNewLabel_1_1 = new JLabel("Seleccione Materia:");
-		lblNewLabel_1_1.setForeground(Color.WHITE);
-		lblNewLabel_1_1.setFont(new Font("Century Gothic", Font.PLAIN, 20));
-		lblNewLabel_1_1.setBounds(50, 274, 235, 30);
-		panel_2.add(lblNewLabel_1_1);
-		
 		String materias[] = {"Matemáticas", "Dibujo", "Español", "Geometría"};
-		JComboBox<Object> comboMaterias = new JComboBox<Object>(materias);
-		comboMaterias.setBounds(50, 324, 1000, 40);
-		panel_2.add(comboMaterias);
 		
 		JLabel lblNewLabel_2_1_2 = new JLabel("Comentarios sobre Estudiante:");
 		lblNewLabel_2_1_2.setForeground(Color.WHITE);

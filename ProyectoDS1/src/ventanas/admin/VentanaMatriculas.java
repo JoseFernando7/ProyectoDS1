@@ -12,6 +12,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
+import controllers.AdEstudianteController;
 import controllers.MatriculaController;
 
 import java.awt.Font;
@@ -510,6 +511,13 @@ public class VentanaMatriculas extends JFrame
 		panel.add(btnProfesor);
 		
 		JButton btnEstudiantes = new JButton("");
+		btnEstudiantes.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				MatriculaController.botonEstudiante();
+			}
+		});
 		btnEstudiantes.setBounds(10, 232, 60, 60);
 		btnEstudiantes.setIcon(new ImageIcon(new ImageIcon("Imgs/estudiantes.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT)));
 		btnEstudiantes.setFocusPainted(false);
@@ -518,6 +526,13 @@ public class VentanaMatriculas extends JFrame
 		panel.add(btnEstudiantes);
 		
 		JButton btnReportes = new JButton("");
+		btnReportes.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				MatriculaController.botonReporte();
+			}
+		});
 		btnReportes.setBounds(10, 303, 60, 60);
 		btnReportes.setIcon(new ImageIcon(new ImageIcon("Imgs/registrar_notas.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT)));
 		btnReportes.setFocusPainted(false);
@@ -526,6 +541,13 @@ public class VentanaMatriculas extends JFrame
 		panel.add(btnReportes);
 		
 		JButton btnRegistrar = new JButton("");
+		btnRegistrar.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				MatriculaController.botonAnotaciones();
+			}
+		});
 		btnRegistrar.setBounds(10, 374, 60, 60);
 		btnRegistrar.setIcon(new ImageIcon(new ImageIcon("Imgs/registrar_notas.png").getImage().getScaledInstance(60, 60, Image.SCALE_DEFAULT)));
 		btnRegistrar.setFocusPainted(false);

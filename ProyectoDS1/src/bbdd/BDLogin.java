@@ -4,7 +4,7 @@ import ventanas.*;
 
 public class BDLogin 
 {
-	public static Login ventana = new Login();
+	//public static Login ventana = new Login();
 	Connection conexion;
 	String cadenaConexion = "jdbc:mysql://localhost/proyectods1?serverTimezone=UTC";
 	String usuario = "root";
@@ -26,12 +26,12 @@ public class BDLogin
 	public String loginUserAdmin()
 	{
 		String resultado = "";
-		String usuario = ventana.getTextUser().getText();
+		//String usuario = ventana.getTextUser().getText();
 		
 		try 
 		{
 			Statement s = conexion.createStatement();
-			ResultSet res = s.executeQuery("select * from administrador where nombre = '" + usuario + "'");
+			ResultSet res = s.executeQuery("select * from administrador where documento = 1010158614");
 			
 			while(res.next())
 			{
@@ -48,12 +48,12 @@ public class BDLogin
 	public String loginPassAdmin()
 	{
 		String resultado = "";
-		String password = ventana.getTextPass().getText();
+		//String password = ventana.getTextPass().getText();
 		
 		try 
 		{
 			Statement s = conexion.createStatement();
-			ResultSet res = s.executeQuery("select * from administrador where contraseña = " + password);
+			ResultSet res = s.executeQuery("select * from administrador where documento = 1010158614");
 			
 			while(res.next())
 			{
@@ -70,12 +70,12 @@ public class BDLogin
 	public String verificarAdmin()
 	{
 		String resultado = "";
-		String password = ventana.getTextPass().getText();
+		//String password = ventana.getTextPass().getText();
 		
 		try 
 		{
 			Statement s = conexion.createStatement();
-			ResultSet res = s.executeQuery("select * from administrador where contraseña = " + password);
+			ResultSet res = s.executeQuery("select * from administrador where documento = 1010158614");
 			
 			while(res.next())
 			{
@@ -88,7 +88,7 @@ public class BDLogin
 		}
 		return resultado;
 	}
-	
+	/*
 	//Login para docente
 	public String loginUserDocente()
 	{
@@ -155,7 +155,7 @@ public class BDLogin
 		}
 		return resultado;
 	}
-		
+	
 	//Login para padre
 	public String loginUserPadre()
 	{
@@ -221,5 +221,5 @@ public class BDLogin
 			System.out.println(e);
 		}
 		return resultado;
-	}
+	}*/
 }

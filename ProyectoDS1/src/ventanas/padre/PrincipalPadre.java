@@ -292,6 +292,12 @@ public class PrincipalPadre extends JFrame
 		telTitular_8.setBounds(292, 663, 269, 28);
 		panel_2.add(telTitular_8);
 		
+		JButton btnCambiarContrasena = new JButton("Cambiar Contrase\u00F1a");
+		btnCambiarContrasena.setFont(new Font("Century Gothic", Font.PLAIN, 15));
+		btnCambiarContrasena.setBounds(48, 702, 200, 30);
+		btnCambiarContrasena.setFocusPainted(false);
+		panel_2.add(btnCambiarContrasena);
+		
 		JButton btnConsultar = new JButton("");
 		btnConsultar.addActionListener(new ActionListener() 
 		{
